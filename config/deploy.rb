@@ -51,11 +51,13 @@ role :db, 'ec2-52-68-213-117.ap-northeast-1.compute.amazonaws.com'
 # Default value for default_env is {}
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
 
-# Default value for keep_releases is 5
-# set :keep_releases, 5
+set :keep_releases, 3
 
 namespace :deploy do
-
+  desc 'Restart application'
+  task :restart do
+    invoke 'unicorn:restart'
+  end
   after :restart, :clear_cache do
     on roles(:web), in: :groups, limit: 3, wait: 10 do
       # Here we can do anything such as:
@@ -64,5 +66,5 @@ namespace :deploy do
       # end
     end
   end
-
 end
+

@@ -177,6 +177,7 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   jbuilder (~> 2.0)
   jquery-rails
+  minitest (= 5.8.3)
   rails (= 4.2.5)
   rename
   sass-rails (~> 5.0)
