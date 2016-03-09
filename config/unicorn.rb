@@ -26,13 +26,13 @@ stderr_path File.expand_path('../../log/unicorn_stderr.log', __FILE__)
 stdout_path File.expand_path('../../log/unicorn_stdout.log', __FILE__)
 
 # Nginxで使用する場合は以下の設定を行う。
-listen File.expand_path('../../tmp/sockets/unicorn.sock', __FILE__)
+listen "/var/www/capis_test/tmp/sockets/unicorn.sock"
 # とりあえず起動して動作確認をしたい場合は以下の設定を行う。
 #listen 8080
 # ※「backlog」や「tcp_nopush」の設定もあるけど、よくわかって無い。
 
 # プロセスの停止などに必要なPIDファイルの保存先を指定。
-pid File.expand_path('../../tmp/pids/unicorn.pid', __FILE__)
+pid "/var/www/capis_test/tmp/pids/unicorn.pid"
 
 # 基本的には`true`を指定する。Unicornの再起動時にダウンタイムなしで再起動が行われる。
 preload_app true
