@@ -2,7 +2,7 @@
 
 
 #Railsのルートパスを求める。(RAILS_ROOT/config/unicorn.rbに配置している場合。) 参照=> http://maeharin.hatenablog.com/entry/20130104/p1
-rails_root = File.expand_path('../../', __FILE__)
+rails_root = "/var/www/capis_test/current"
 # RAILS_ENVを求める。（RAILS_ENV毎に挙動を変更したい場合に使用。今回は使用しません。)
 # rails_env = ENV['RAILS_ENV'] || "development"
 
